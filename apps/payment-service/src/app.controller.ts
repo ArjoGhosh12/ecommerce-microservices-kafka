@@ -13,6 +13,7 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+  
   @MessagePattern("process-payment")
 processPayment(@Payload() data: any){
   console.log('[Payment Service] Payment in process', data)
